@@ -7,7 +7,7 @@ import products from "@/const/products";
 import { Suspense } from "react";
 import CardWithSaleTimes from "../CardWithSaleTimes";
 
-export default function ProductGrid(){
+export default function ProductGridFreq(){
     const [data, setData] = useState([]);
     const [additionaldata, setAdditionalData] = useState([]);
     const bottomOfPage = usePageBottom();
@@ -17,7 +17,7 @@ export default function ProductGrid(){
         {
             products.map((product, index) => {
                 return(
-                    <Card product={product} key={index}/>
+                    <CardWithSaleTimes product={product} key={index}/>
                 )
             })
         }
