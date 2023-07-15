@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Card(props) {
   return (
-    <div className="w-1/4 p-8">
+    <div className="lg:w-1/3 p-8 md:w-1/2">
       <div className={style}>
         <Link href="https://www.woolworths.com.au/" className="w-full h-full">
         {
