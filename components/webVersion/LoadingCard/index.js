@@ -2,7 +2,7 @@ import style from "./style";
 import "../../../assets/placeholder-image.png";
 import Link from "next/link";
 
-export default function Card(props) {
+export default function LoadingCard() {
   return (
     <div className="lg:w-1/3 p-8 md:w-1/2">
       <div className={style}>
@@ -16,16 +16,16 @@ export default function Card(props) {
           </div>
         </div>
         <div className="h-1/3 flex flex-wrap p-6 overflow-hidden bg-white">
-          <div className="h-2/3 text-lg w-full overflow-hidden">{props.product.ItemName}</div>
-          <div className="w-1/3 text-lg">{props.product.CurrentPrice}</div>
-          <div className="w-1/3 text-sm line-through text-red-600">Was {props.product.Rrp}</div>
+          <div className="h-2/3 text-lg w-full overflow-hidden">___________</div>
+          <div className="w-1/3 text-lg">_____</div>
+          <div className="w-1/3 text-sm line-through text-red-600">_____</div>
           <div className="w-1/3 text-sm text-red-600">
-            {Math.round(props.product.DiscountPercentage * 100)}% off
+          _____
 
           </div>
         </div>
         <div className="relative h-20 w-20 -top-44 left-4 bg-white rounded-full overflow-hidden">
-            <img className="object-cover h-20 w-20" src="https://pelicanwaterscommunity.com.au/wp-content/uploads/2017/11/Woolworths-logo.png"></img>
+            <img className="object-cover h-20 w-20" src="https://cdn.dribbble.com/users/1573719/screenshots/17412310/media/66027a1af47c5e8d057773692d1b87c3.png?resize=400x0"></img>
         </div>
         </Link>
       </div>

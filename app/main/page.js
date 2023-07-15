@@ -9,6 +9,7 @@ export default function Home(){
         <div className="flex flex-wrap">
             <NavBar/>
             <FilterMenu/>
+            <div className="w-1/5"/>
             <div className="w-4/5">
                 <ProductGrid/>
             </div>

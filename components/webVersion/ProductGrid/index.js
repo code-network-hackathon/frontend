@@ -4,6 +4,8 @@ import usePageBottom from "@/hooks/usePageBottom";
 import { useEffect, useState } from "react";
 import Card from "@/components/webVersion/Card";
 import products from "@/const/products";
+import LoadingCard from "@/components/webVersion/LoadingCard";
+import { Suspense } from "react";
 
 export default function ProductGrid(){
     const [data, setData] = useState([]);
@@ -15,7 +17,7 @@ export default function ProductGrid(){
         {
             products.map((product, index) => {
                 return(
-                    <Card key={index} product={product} />
+                    <Card product={product} key={index}/>
                 )
             })
         }
