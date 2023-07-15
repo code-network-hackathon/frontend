@@ -14,8 +14,7 @@ const useFetchData = (url, options) => {
         else{
             setLoading(false);
             setError(response.statusText);
-        }
-        
+        }  
     }
     if(loading) getDatas();
     return {
