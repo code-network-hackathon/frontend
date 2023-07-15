@@ -10,8 +10,6 @@ const useFetchData = (url, options) => {
             const data = await response.json();
             setLoading(false);
             setData(data);
-            console.log(data);
-            console.log(response.ok)
         }
         else{
             setLoading(false);
