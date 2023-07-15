@@ -9,8 +9,6 @@ export default function FilterMenu () {
     const sortByInput = useInput("lowestPrice");
     const goodCategoryInput = useInput("all");
 
-    const testValue = useSelector((state) => state.filter.search);
-
     const dispatch = useDispatch()
 
     const handleSubmit = (e) => {
