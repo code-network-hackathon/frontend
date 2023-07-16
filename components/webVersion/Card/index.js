@@ -2,6 +2,7 @@ import style from "./style";
 import "../../../assets/placeholder-image.png";
 import Link from "next/link";
 import {defaultLinks,defaultImageLink} from "@/const/defaultLink";
+import Image from "next/image";
 
 export default function Card(props) {
   const defaultImage = "https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tfGVufDB8fDB8fHww&w=1000&q=80";
