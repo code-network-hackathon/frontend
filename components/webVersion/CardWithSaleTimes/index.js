@@ -35,6 +35,7 @@ export default function Card(props) {
         <div className="relative h-20 w-20 -top-44 left-4 bg-white rounded-full overflow-hidden">
             <img className="object-cover h-20 w-20" src={defaultImageLinkR}></img>
         </div>
+        
         </Link>
       </div>
     </div>
