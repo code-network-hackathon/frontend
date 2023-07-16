@@ -6,21 +6,30 @@ import Card from "@/components/webVersion/Card";
 import products from "@/const/products";
 import { Suspense } from "react";
 import CardWithSaleTimes from "../CardWithSaleTimes";
+import { useSelector } from 'react-redux'
+import useFetchData from "@/hooks/useFetchData";
+import LoadingCard from "../LoadingCard";
 
 export default function ProductGrid(){
-    const [data, setData] = useState([]);
-    const [additionaldata, setAdditionalData] = useState([]);
-    const bottomOfPage = usePageBottom();
-    console.log(products)
+    const data = useFetchData("https://aggregator-api.onrender.com/products");
+    const filters = useSelector(state => state.filter); 
     return(
         <div className="flex flex-wrap overflow-hidden">
         {
-            products.map((product, index) => {
+            data.data.map((product, index) => {
                 return(
-                    <Card product={product} key={index}/>
+                    data.loading ?
+                    (product.itemName.toLowerCase().includes(filters.search.toLowerCase()))?
+                        <Card key={index} product={product}/>:<div/>
+                    :<LoadingCard key={index}/>
+                    
+                    
                 )
             })
         }
+            <div className="w-full h-16 flex justify-center text-align-center font-mono">
+                There's no products left :(
+            </div>
         </div>
     )
 }

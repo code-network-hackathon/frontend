@@ -7,6 +7,13 @@ import useFetchData from "@/hooks/useFetchData";
 
 export default function TestingPage() {
     return(
-        <NavBar/>
+        <div className="flex flex-wrap">
+            <NavBar/>
+            <FilterMenu/>
+            <div className="w-1/5"/>
+            <div className="w-4/5">
+                <ProductGrid/>
+            </div>
+        </div>
     )
 }

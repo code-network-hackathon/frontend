@@ -1,7 +1,8 @@
 import useInput from "@/hooks/useInput"
 import style from "./style.js";
-import { UseSelector, useDispatch, useSelector } from 'react-redux'
+import { useDispatch} from 'react-redux'
 import { setFilter } from "@/store/reducers/fliterSlice.js";
+
 
 
 export default function FilterMenu () {
